@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #efefef;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    background: #444;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #555;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    background: #666;
+    transform: scale(1.1);
+    color: #ff0000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: scale(1);
+    opacity: 1;
+    animation: crazyHover 1s infinite alternate;
+}
+
+/* Crazy hover animation */
+@keyframes crazyHover {
+    0% {
+        transform: rotate(0deg) scale(1) translateX(0);
+        background-color: #555;
+    }
+    25% {
+        transform: rotate(15deg) scale(1.2) translateX(20px);
+        background-color: #ff4444;
+    }
+    50% {
+        transform: rotate(-15deg) scale(1.4) translateX(-20px);
+        background-color: #00ff00;
+    }
+    75% {
+        transform: rotate(30deg) scale(1.6) translateX(30px);
+        background-color: #4444ff;
+    }
+    100% {
+        transform: rotate(-30deg) scale(1.8) translateX(-30px);
+        background-color: #ff00ff;
+    }
+}
+
+.upp {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.upp a {
+    display: inline-block;
+    background: #919191;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.upp a:hover {
+    background: #000000;
+}
+
+.produkter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.produkt {
+    background: white;
+    padding: 15px;
+    width: 250px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+.produkt img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.produkt a {
+    display: block;
+    color: #ff0000;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.produkt a:hover {
+    text-decoration: underline;
+}
+
+.reviews-header {
+    background-color: #f7f7f7;  /* Light neutral background */
+    padding: 25px;
+    text-align: center;
+    color: #2d2d2d;  /* Subtle dark text */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+    margin-bottom: 35px;
+}
+
+.reviews-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700; /* Bold text for impact */
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Increased letter spacing for elegance */
+    color: #4a4a4a;  /* Slightly lighter gray text */
+    font-family: 'Helvetica Neue', sans-serif;  /* Clean modern font */
+    animation: slideIn 1s ease-out; /* Animation for some flair */
+}
+
+/* Fun slide-in animation for the header */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.reviews {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    color: #333;
+    text-align: center;
+}
+
+.review-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Reduced space between reviews */
+}
+
+.review {
+    flex: 1;
+    padding: 15px;
+    background-color: #f8f8f8; /* More neutral background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+}
+
+.review:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+}
+
+.review p {
+    font-size: 14px; /* Smaller text for a more compact look */
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #555; /* More discreet text color */
+}
+
+.customer {
+    font-weight: bold;
+    font-size: 16px; /* Smaller text for customer names */
+    color: #444; /* Subtle color for customer names */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+/* Subtle color changes for each review to keep it discreet */
+.review:nth-child(1) {
+    background-color: #e0e0e0; /* Light grey */
+}
+
+.review:nth-child(2) {
+    background-color: #d6d6d6; /* Slightly darker grey */
+}
+
+.review:nth-child(3) {
+    background-color: #c8c8c8; /* Even darker grey */
+}
+
+.review-container > .review {
+    transition: transform 0.5s ease;
+}
+
+.review:hover {
+    transform: translateY(-3px); /* Slight hover effect */
+}
+
+/* Ensure reviews don't stack on top of each other on smaller screens */
+@media (max-width: 768px) {
+    .review-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .review {
+        margin-bottom: 15px;
+    }
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}

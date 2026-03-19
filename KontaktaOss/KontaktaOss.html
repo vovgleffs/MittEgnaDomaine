@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Support</title>
+    <link rel="stylesheet" href="KontaktaOss.css">
+</head>
+<body>
+<div class="flexilogga">
+    <img src="flexilogga.png" alt="Logga" height="750" width="750"/><!--https://gyazo.com/fb17c654502ca772f0511a28c248bdfb-->
+</div>
+<div class="Header">
+    <h1>Kontakta FlexiSupport</h1>
+</div>
+<form>
+    <div class="Allt">
+
+        <div class="Uppgifter"> <!-- OBS FÅR EJ HA BREAKS HÄR, HUR SKA VI LÖSA DETTA PROBLEM?-->
+            <label for="namn">
+                Ange förnamn och efternamn
+            </label>
+            <input type="text" placeholder="Namn" id="namn"/>
+            <label for="nummer">
+            Ange telefonnummer, inklusive landskod
+            </label>
+            <input type="number" placeholder="Telefonnummer" id="nummer"/>
+            <label for="email">
+            Ange e-post, allting funkar förutom g-mail
+            </label>
+            <input type="email" placeholder="E-mail" id="email"/>
+            <label for="checkbox">
+            Ange kön
+            </label>
+            <input type="checkbox" id="checkbox"/>
+            <label for="option1">
+            Vilken produkt vill du kontakta oss angående?
+            </label>
+            <select id="option1">
+                <option>Flexilex</option>
+                <option>Kontakta oss</option>
+                <option>Gabriel</option>
+                <option>LexAdapt</option>
+                <option>JuriFlex</option>
+                </select>
+            <label for="namn2">
+            Ange förnamn och efternamn
+            </label>
+            <input type="text" placeholder="Namn" id="namn2"/>
+            <label for="radio1">
+            Är du övervakad?
+            Ja / Nej
+            <input type="radio" name="Värde1" id="radio1"/>
+            </label>
+            <label for="radio2">
+            <input type="radio" name="Värde1" id="radio2"/>
+            </label>
+            <label for="radio3">
+            Har 3 identiska bilar kör förbi dig inom det senaste 6 minuterna?
+            Ja / Nej
+            <input type="radio" name="Värde2" id="radio3">
+            </label>
+            <label for="radio4">
+            <input type="radio" name="Värde2" id="radio4">
+            </label>
+            <label for="radio5">
+            Är du flexibel?
+            Ja / Nej
+            <input type="radio" name="Värde3" id="radio5">
+            </label>
+            <label for="radio6">
+            <input type="radio" name="Värde3" id="radio6">
+            </label>
+            <label for="textarea">
+                Ange ditt ärende här!!
+
+            </label>
+            <textarea rows="25" cols="75" id="textarea"></textarea>
+            <label for="button1">
+            <button type="submit" id="button1">Skicka </button>
+            </label>
+            <label for="button2">
+                <button type="reset" id="button2">Börja om </button>
+            </label>
+        </div>
+    <div class="Tack">
+        <p>Tack för att du vågade kontakta oss!</p>
+        <p>Ha en fortsatt trevlig dag!</p>
+        <p>Hvala vam što ste se usudili da nas kontaktirate!</p>
+        <p>Ugodan dan!</p>
+
+    </div>
+    </div>
+</form>
+</body>
+</html>

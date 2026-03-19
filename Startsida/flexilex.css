@@ -1,0 +1,221 @@
+/*använt youtube tutorials etc för hjälp med de svårare delar av koden*/
+body {
+    background-color: #0a0a0a;
+    color: #0fff0f;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 5px #00ff00;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 3em;
+    text-align: center;
+    animation: glitch 1.5s infinite;
+}
+
+.header .subtitle {
+    text-align: center;
+    font-size: 1.5em;
+    color: #ff3333;
+    margin-bottom: 20px;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px #ff0000; }
+    50% { text-shadow: -2px -2px #00ff00; }
+    100% { text-shadow: 2px -2px #0000ff; }
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid #0fff0f;
+    box-shadow: 0 0 10px #0fff0f;
+}
+
+.image-frame img {
+    width: 300px;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 10px red;
+    filter: grayscale(100%) contrast(200%);
+}
+
+.product-description {
+    max-width: 400px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+
+.buy-now-button {
+    padding: 5px 15px;
+    background: #00ff00;
+    color: black;
+    font-weight: bold;
+    border: 1px solid #00ff00;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.buy-now-button:hover {
+    background: black;
+    color: #00ff00;
+}
+
+
+.whispering-text {
+    font-style: italic;
+    opacity: 0.6;
+    animation: whisper 3s infinite;
+}
+
+@keyframes whisper {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+
+.distorted-text {
+    font-style: italic;
+    animation: distort 2s infinite;
+}
+
+@keyframes distort {
+    0% { transform: scale(1) skew(0deg); }
+    50% { transform: scale(1.05) skew(2deg); }
+    100% { transform: scale(1) skew(0deg); }
+}
+
+
+select {
+    background-color: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+select:hover {
+    background-color: #00ff00;
+    color: black;
+}
+
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    accent-color: red;
+}
+
+input[type="checkbox"]:checked {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Knappstilar */
+.join-us-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.join-us-button:hover {
+    background: darkred;
+    box-shadow: 0 0 10px red;
+}
+
+
+.hidden-menu {
+    display: none;
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.hidden-menu button {
+    background: darkred;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hidden-menu button:hover {
+    background: red;
+}
+
+.hidden-menu.active {
+    display: block;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+.warning {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+
+.paranoia-text {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 1.2em;
+    color: #ff3333;
+}
+
+.surveillance-elements,
+.gangstalking-elements {
+    margin: 30px 0;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.8em;
+    opacity: 0.8;
+    border-top: 1px solid #00ff00;
+    padding-top: 10px;
+}
