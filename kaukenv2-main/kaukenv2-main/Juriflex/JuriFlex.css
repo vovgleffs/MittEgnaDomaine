@@ -1,0 +1,45 @@
+* { /* väljer alla sektioner i hela dokumentet */
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman";
+}
+
+
+header{
+    padding:10px;
+    text-align: center;
+}
+main{
+    text-align: center;
+}
+.inne{
+padding: 50px;
+    text-align: center;
+}
+.bakom{text-align: right;
+    background: #919191;
+    padding-left:300px;
+}
+.beskrivning{
+    text-align: left;
+    padding: 5px;
+    border: 10px solid #666666;
+}
+.bild{
+    text-align: right;
+    position: absolute;
+    border: 10px solid #2d2d2d;
+}
+.knappar {
+    padding: 30px;
+}
+.buy{
+    text-align: center;
+    border: 10px solid #666666;
+    padding: 10px;
+}
+footer{
+    padding-top: 50px;
+    text-align: center;
+    font-size:10px;
+}

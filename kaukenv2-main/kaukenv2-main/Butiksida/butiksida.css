@@ -1,0 +1,153 @@
+* { /* väljer alla sektioner i hela dokumentet */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: #efefef;
+    color: #333;
+    text-align: center;
+}
+
+nav { /* FIXADE UPP NAV BAREN */
+    display: flex;
+    background: #444;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+.dropdown { /* Dropdown grejer */
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #555;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    background: #666;
+    transform: scale(1.1);
+    color: #ff0000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: scale(1);
+    opacity: 1;
+    animation: crazyHover 1s infinite alternate;
+}
+
+/* Crazy hover animation, tagen från nätet hehe */
+@keyframes crazyHover {
+    0% {
+        transform: rotate(0deg) scale(1) translateX(0);
+        background-color: #555;
+    }
+    25% {
+        transform: rotate(15deg) scale(1.2) translateX(20px);
+        background-color: #ff4444;
+    }
+    50% {
+        transform: rotate(-15deg) scale(1.4) translateX(-20px);
+        background-color: #00ff00;
+    }
+    75% {
+        transform: rotate(30deg) scale(1.6) translateX(30px);
+        background-color: #4444ff;
+    }
+    100% {
+        transform: rotate(-30deg) scale(1.8) translateX(-30px);
+        background-color: #ff00ff;
+    }
+}
+/* border samt border hover färg */
+img {
+    border: 5px solid hotpink;
+}
+img:hover {
+    border-color: greenyellow;
+}
+/* Header grejer */
+header {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+header img {
+    float: none;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+/* tar bort bordern på loggan högst upp på sidan */
+.headbild img {
+    border: none;
+}
+/* ska jag vara ärlig vet jag inte ens om den här fungerar men den får va här ändå, den e för google maps */
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+* {
+    box-sizing: border-box;
+
+}
+/* Kanske överkomplicerade litegrann här men better safe than sorry och den fungerar så :D */
+.img-container {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+th, td {
+  background-color: greenyellow;
+}

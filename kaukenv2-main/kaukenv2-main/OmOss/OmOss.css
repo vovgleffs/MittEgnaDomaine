@@ -1,0 +1,240 @@
+
+.header{
+    text-align: center;
+}
+header {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    position: relative;
+    overflow: hidden; /* Contain the chaos */
+    perspective: 1000px; /* Enable 3D transformations */
+    z-index: 1; /* Ensure header stays above other content */
+}
+
+.graff1{
+    /*positionerar bilden*/
+    margin-left: 250px;
+    z-index: 2;
+}
+.graff2{
+    /*positionerar bilden*/
+    margin-left: 1100px;
+    z-index: 2;
+}
+.Garre{
+    /*positionerar bilden och gör så att den ligger ovanför footer för ett coolt effect*/
+    z-index: 3;
+    margin-left:170px;
+    max-width: 10px;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none;
+    position: absolute;
+    padding-bottom: 20px;
+}
+.hogerBild{
+    /*positionerar bilden till höger sidan av skärmen och ser till så att inget annat påverkas av den*/
+    margin-left: 1400px;
+    height: 100%;
+    object-fit: cover;
+    pointer-events:none;
+    position: absolute;
+    z-index: 3;
+}
+.vansterBild{
+    /*positionerar bilden till vänster sidan av skärmen och ser till så att inget annat påverkas av den*/
+    margin-left: 10px;
+    height: 100%;
+    object-fit: cover;
+    pointer-events:none;
+    position: absolute;
+    z-index: 3;
+}
+
+header img,
+header h1 {
+    display: inline-block; /* Ensure they align horizontally */
+    animation:
+            spin 0.3s linear infinite, /* Super fast spin */
+            bounce 0.2s ease-in-out infinite, /* Rapid bouncing */
+            shake 0.05s linear infinite, /* Insane shaking */
+            colorChange 0.5s linear infinite, /* Rapid color changes */
+            scale 0.2s ease-in-out infinite, /* Scaling up and down */
+            glitch 0.1s linear infinite, /* Glitch effect */
+            flash 0.1s linear infinite, /* Rapid flashing */
+            skew 0.3s linear infinite, /* Skew effect */
+            orbit 2s linear infinite, /* Orbit around the header */
+            explode 1s linear infinite, /* Explosive 3D effect */
+            distort 0.5s linear infinite; /* Chaotic distortion */
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 20px #00ffff); /* Neon glow */
+}
+
+.logo {
+    text-align: center; /*bakgrund till loggan för att det ska se bra ut*/
+    padding: 10px;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    background-color: #333;
+}
+
+.Innehåll{
+    text-align: center;
+    flex: 1;
+    font-size: 25px; /*Stor text storlek då vi inte åldersdiskriminerar och vill att äldre och synnedsatta personer ska kunna läsa*/
+    padding-bottom: 1px; /* Ger mig utrymme innan footer */
+}
+.skapare{
+    text-align: center;
+}
+.footer {
+
+    background-color: #333;
+    z-index:1;
+    padding-bottom: 0;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+.footer p{
+    color: white;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-20px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    75% {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+}
+
+@keyframes glitch {
+    0%, 100% {
+        clip-path: inset(0 0 0 0);
+    }
+    25% {
+        clip-path: inset(20px 0 0 0);
+    }
+    50% {
+        clip-path: inset(0 0 20px 0);
+    }
+    75% {
+        clip-path: inset(0 20px 0 0);
+    }
+}
+
+@keyframes flash {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes skew {
+    0%, 100% {
+        transform: skew(0deg);
+    }
+    50% {
+        transform: skew(45deg);
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(100px) translateY(-50px);
+    }
+    50% {
+        transform: translateX(0) translateY(-100px);
+    }
+    75% {
+        transform: translateX(-100px) translateY(-50px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes explode {
+    0%, 100% {
+        transform: translateZ(0) rotateX(0) rotateY(0);
+    }
+    50% {
+        transform: translateZ(100px) rotateX(360deg) rotateY(360deg);
+    }
+}
+
+@keyframes distort {
+    0%, 100% {
+        transform: skew(0deg) scale(1);
+    }
+    25% {
+        transform: skew(45deg) scale(1.5);
+    }
+    50% {
+        transform: skew(-45deg) scale(0.5);
+    }
+    75% {
+        transform: skew(90deg) scale(2);
+    }
+}
+
+
+
+

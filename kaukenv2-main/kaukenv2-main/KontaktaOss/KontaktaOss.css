@@ -1,0 +1,23 @@
+.flexilogga{
+    margin-left: 22%;
+}
+label { /* gör det snyggare */
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.Header{
+
+    font-size: 25px;
+    font-family: "Comic Sans MS";
+    text-align: center;
+}
+.Allt{
+    text-align: center;
+
+}
+.Uppgifter{
+    padding-left: 30%;
+    padding-bottom: 5%;
+    text-align: left;
+}
