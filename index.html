@@ -2,148 +2,119 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <title>Acrylic Road</title>
-    <link rel="stylesheet" href="startsida.css"> <!---- Här länkar man till en CSS fil-->
+    <title>Välkommen...</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: red;
+            font-family: "Courier New", monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: flicker 2s infinite;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 10px red, 0 0 20px darkred;
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: transparent;
+            border: 2px solid red;
+            color: red;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: red;
+            color: black;
+            box-shadow: 0 0 20px red;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* glitch effekt */
+        .glitch {
+            position: relative;
+            color: red;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+        }
+
+        .glitch::before {
+            animation: glitchTop 1s infinite;
+            color: #ff0000;
+            clip-path: inset(0 0 50% 0);
+        }
+
+        .glitch::after {
+            animation: glitchBottom 1s infinite;
+            color: #990000;
+            clip-path: inset(50% 0 0 0);
+        }
+
+        @keyframes glitchTop {
+            0% { transform: translate(0); }
+            50% { transform: translate(-2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        @keyframes glitchBottom {
+            0% { transform: translate(0); }
+            50% { transform: translate(2px, 2px); }
+            100% { transform: translate(0); }
+        }
+
+    </style>
 </head>
 <body>
-<!--- här lägger man in allt i en divclass som kan styra, större mer generella delar av gemensamma faktorer---->
+
 <div class="container">
-    <!--header-->
-    <header>
+    <h1 class="glitch" data-text="DU BORDE INTE VARA HÄR">
+        DU BORDE INTE VARA HÄR
+    </h1>
 
-        <div class="header">
-            <div class="road"></div>
-            <div class="broken-road"></div>
-            <div class="car"></div>
-            <h1>Acrylic Road<br>
-                Lagligt flexibla</h1>
-            <figure>
-                <div class="headbild">
-                    <img src="loggan.png" alt="Logo"  style="width: 300px; height: auto;"/> <!--https://gyazo.com/be1e5dc9f4d6676e3a2580a152b7694c-->
-                </div>
-            </figure>
-        </div>
-    </header>
+    <p>...men nu när du är här finns ingen återvändo</p>
 
-    <!-- Här är navigations"baren" för sidan -->
-    <nav id="menu">
-        <a href="#">Hem</a>
-        <div class="dropdown">
-            <a href="../Butiksida/Butik.html" class="dropbtn">Produkter</a>
-            <div class="dropdown-content">
-                <a href="../KontaktaOss/KontaktaOss.html">LexAdapt</a>
-                <a href="flexilex.html">FlexiLex</a>
-                <a href="../Juriflex/JuriFlex.html">JuriFlex</a>
-            </div>
-        </div>
-        <a href="../OmOss/OmOss.html">Om oss</a>
-        <a href="../KontaktaOss/KontaktaOss.html">Kontakta oss</a>
-    </nav>
-    <!--Välkomstsidan-->
-    <div class="upp">
-        <h2>Välkommen till Acrylic Road</h2>
-        <p>Upptäck våra lagligt flexibla produkter</p>
-        <a href="../Butiksida/Butik.html">Shoppa nu!</a>
-    </div>
-
-    <!-- Produktsidan-->
-    <!--- bild tagen från denna url: https://www.hollister.se/sv-se/products/ostomy-care-products/ostomy-accessories/stoma-pastes/adapt-skin-barrier-paste--->
-    <div class="produkter">
-        <div class="produkt">
-            <img src="adapt.jpg" alt="En bild på en produkt som är lagligt flexibel">
-            <h3>LexAdapt</h3>
-            <p><b>LexAdapt – Juridisk Agilitet i Perfektion</b><br>
-                Flexibilis et adaptabilis, nostra <b>LexAdapt</b> solutio in omni iure operatur.<br>
-                Nulla contractus immutabilis, nulla clausula inflexibilis – cum <b>LexAdapt™</b>,<br>
-                statuta et regulae in tua manu sunt.<br><br>
-                <b>Dynamisk efterlevnad</b><br>
-                <b>Automatiserad regeluppdatering</b><br>
-                <b>Maximal juridisk anpassningsförmåga</b>
-            </p>
-            <a href="../KontaktaOss/KontaktaOss.html">Läs mer!!!!!!!</a>
-        </div>
-
-        <div class="produkt">
-            <!--- Flexilax bild tagen från denna adress:https://lens.usercontent.google.com/image?vsrid=CPjE2vT7_____wEQAhgBIiRiYWJjNzUyYy0yMTdiLTQ0ODAtYWU2Yi00NDI0YjMzYTk2NTI&gsessionid=srl9SFZ_K09qM_Acmd9m67hi41uUxn-xcRojgh62J-D1oLCvLKRhcg-->
-            <img src="flexilax.jpg" alt="Bild på en ännu en lagligt flexibel produkt!!">
-            <h3>FlexiLex</h3>
-            <p><i>FlexiLex™ – Lagligt Flexibel Innovation</i><br>
-                Innovativa <b>FlexiLex™</b> anpassar sig till lagar som ständigt förändras.<br>
-                Inga stela regler, inga fasta klausuler – med <b>FlexiLex™</b>, flexibilitet och<br>
-                efterlevnad går hand i hand.<br><br>
-                <b>Automatisk regeluppdatering</b><br>
-                <b>Modulär kontraktsstruktur</b><br>
-                <b>Maximal juridisk flexibilitet</b>
-            </p>
-            <a href="flexilex.html">Läs mer!!!!!!!</a>
-        </div>
-
-        <div class="produkt">
-            <!-- Bild tagen från denna url: https://news.sky.com/story/who-is-ross-ulbricht-founder-of-drug-marketplace-silk-road-now-pardoned-by-trump-13294204. redigerad i gimp av mig-->
-            <img src="Ross.png" alt="Ännu en lagligt flexibel produkt!!">
-            <h3>JuriFlex</h3>
-            <p><b>JuriFlex – Oändligt Anpassningsbar Juridisk Efterlevnad</b><br>
-                <b>JuriFlex</b> analyserar och justerar sig automatiskt efter aktuella lagar,<br>
-                vilket ger trygghet utan att begränsa innovation.<br><br>
-                <b>Real-tids anpassning till lagändringar</b><br>
-                <b>Modulär juridisk struktur</b><br>
-                <b>Automatiserad efterlevnad</b>
-            </p>
-            <a href="../Juriflex/JuriFlex.html">LÄS ALLT!!!!!!!!!!!</a>
-        </div>
-    </div>
-
-    <div class="reviews-header">
-        <h2>Recensioner från våra nöjda, mentalt okalibrerade köpare</h2>
-    </div>
-
-    <section class="reviews">
-        <div class="review-container">
-            <div class="review">
-                <p>JuriFlex – DE SER OSS!</p>
-                <p>JuriFlex är inte bara "flexibelt" – de följer oss, ALLTID!
-                    <br>DE ÄR ÖVERALLT!<br>Det här systemet anpassar sig efter LAGAR, men det är inte för att hjälpa oss – det är för att
-                    övervaka oss!<br>Varje rörelse, varje klick, de har koll på oss!
-                    <br>Real-tids anpassning? MER som real-tids övervakning!<br>
-                    DE SER OSS JUST NU!<br>
-                    Automatiserad efterlevnad? DE Tvingar oss att följa regler vi inte ens vet om!<br>
-                    DE KOMMER HÄR!</p>
-                <p class="customer">- John Doe</p>
-            </div>
-            <div class="review">
-                <p>"FlexiLex™ – VARNING! De ser dig!<br>
-                    Det är inte bara en app för lagar, det är övervakning!<br>
-                    De spårar varje steg vi tar, varje knapptryckning!<br>
-                    "Modulär kontraktsstruktur"? Mer som ett verktyg för att manipulera oss!<br>
-                    De vet allt, ser allt, och nu kontrollerar de våra kontrakt!<br>
-                    De övervakar oss genom "uppdaterade regler" – inget är privat!<br>
-                    Lita inte på FlexiLex™. De är där, och de ser dig.<br>
-                    Stanna borta. "</p>
-                <p class="customer">- Sarah Smith</p>
-            </div>
-            <div class="review">
-                <p>"Jag ser er!<br> Ni tror ni kan gömma er, men ni är inte så smarta!<br>
-                    Jag hör er! Jag hör era tankar genom väggarna!<br>
-                    Jag vet vad ni gör, ni försöker komma åt mig genom skärmarna.<br>
-                    Ni trodde ni kunde lura mig, men det går inte.<br>
-                    Det här är inte bara en recension, det är en signal!<br>
-                    De har programmet!<br> De hör varenda steg, varenda ord.<br>
-                    Det här är inte verklighet, det är bara en del av planen för att hålla oss alla i schack!<br>
-                    Jag ser alla tecken, ni kan inte dölja er för mig längre!<br>
-                    De vet vad jag gör, och de kommer att ta mig nästa gång!<br>
-                    Jag hör er nu, de är här, de är överallt!<br> De ser mig!<br>
-                    Ni ser mig! VAD GÖR NI HÄR?!<br></p>
-                <p class="customer">- Michael Johnson</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- footer -->
-    <footer>
-        <p>Acrylic Road Incorporated &copy; 2025</p>
-    </footer>
+    <button onclick="enterSite()">GÅ VIDARE</button>
 </div>
+
+<script>
+    function enterSite() {
+        window.location.href = "Startsida/startsida.html";
+    }
+
+    // slumpmässigt blinkande titel
+    setInterval(() => {
+        document.title = Math.random() > 0.5 ? "..." : "VÄND OM";
+    }, 1000);
+</script>
 
 </body>
 </html>
