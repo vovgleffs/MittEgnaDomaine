@@ -72,7 +72,6 @@ nav a:hover {
     display: block;
     transform: scale(1);
     opacity: 1;
-    animation: crazyHover 1s infinite alternate;
 }
 
 /* Crazy hover animation */
