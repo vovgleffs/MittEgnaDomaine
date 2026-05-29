@@ -63,32 +63,10 @@ nav a:hover {
     display: block;
     transform: scale(1);
     opacity: 1;
-    animation: crazyHover 1s infinite alternate;
 }
 
 /* Crazy hover animation, tagen från nätet hehe */
-@keyframes crazyHover {
-    0% {
-        transform: rotate(0deg) scale(1) translateX(0);
-        background-color: #555;
-    }
-    25% {
-        transform: rotate(15deg) scale(1.2) translateX(20px);
-        background-color: #ff4444;
-    }
-    50% {
-        transform: rotate(-15deg) scale(1.4) translateX(-20px);
-        background-color: #00ff00;
-    }
-    75% {
-        transform: rotate(30deg) scale(1.6) translateX(30px);
-        background-color: #4444ff;
-    }
-    100% {
-        transform: rotate(-30deg) scale(1.8) translateX(-30px);
-        background-color: #ff00ff;
-    }
-}
+
 /* border samt border hover färg */
 img {
     border: 5px solid hotpink;
